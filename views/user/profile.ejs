@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    
+    <title>Document</title>
+</head>
+<body>
+
+        <form action="/user/updateUserProfile" method="post">   
+        <form action="/user/deleteUser" method="post">
+         <!-- delete not functioning        -->
+        
+        <h2><%= header%></h2>
+        <p>Name: <input type="text" name="username" id="username" value=<%= username %>></p>
+        <p>Password: <input type="text" name="password" id="password" value=<%= password %>></p>
+        <p>Firstname: <input type="text" name="firstname" id="firstname" value=<%= firstname %>></p>
+        <p>Lastname: <input type="text" name="lastname" id="lastname" value=<%= lastname %>></p>
+        <p>ObjectId: <input type="text" name="id" id="id" value=<%=  ObjectId%>></p>
+          
+        
+        <input type="submit" value="update" >
+        <input type="submit" value="Delete">
+        </form>
+   
+      </form>
+       
+</body>
+</html>

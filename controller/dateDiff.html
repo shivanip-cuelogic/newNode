@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+   <button onclick="myfun()">clickme</button>
+
+
+  <script>
+    function myfun(){
+//       var date1 = new Date("03/11/2018");
+// var date2 = new Date("03/03/2018");
+// var timeDiff = Math.abs(date2.getTime() - date1.getTime());
+// var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+// alert("difference is"+diffDays);
+
+var today = new Date();
+var mydate = today.getTime();
+var thatDay = new Date("Tue Mar 25 2018 14:34:59 GMT+0530 (IST)");
+var thatDayTime = thatDay.getTime();
+var timeDiff = Math.abs(mydate - thatDayTime);
+var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
+
+if(diffDays<5)
+{
+alert("difference is:"+diffDays);
+
+    
+  }
+  else
+  {
+    alert("Every thing all right");
+  }   
+    }
+    
+    </script>
+
+</body>
+</html>

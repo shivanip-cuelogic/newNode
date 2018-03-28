@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="./../css files/mycss.css">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="completePage">
+
+            <div class="tab">
+           
+            <button class="tablinks" onclick="openCity(event, 'Paris')">Log In</button>
+            <button class="tablinks" onclick="openCity(event, 'London')">Sign Up</button>
+            
+            </div>
+
+            <div id="London" class="tabcontent">
+                <form action="/user/Register" method="post" class="signinform">
+                    <p>Name:</p>
+                    <input type="text" name="username" id="name"> 
+                    <!-- <p>Age:</p>
+                    <input type="Number" name="age" id="age">  -->
+                    <p>Password:</p>
+                    <input type="password" name="password" id="password">
+                    <p>Firstname:</p>
+                    <input type="text" name="firstname" id="firstname">
+                    <!-- <p>Sal:</p>
+                    <input type="Number" name="salary" id="salary"> -->
+                    <p>Lastname:</p>
+                    <input type="text" name="lastname" id="lastname">
+                    <br> 
+                    
+                    
+                    <input type="submit" id="submit"  value="submit">
+                
+                
+            
+            
+                </form>
+            </div>
+
+            <div id="Paris" class="tabcontent">
+                <form action="/user/Login" method="post" class="loginform">
+                
+                    <p>Name:</p>
+                    <input type="text" name="username" id="name"> 
+                    <p>Password:</p>
+                    <input type="password" name="password" id="password">
+                    <br>
+                    <input type="submit" value="Login" id="submit">
+                </form>
+            </div>
+
+</div>
+
+<script>
+            function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+</script>
+     
+</body>
+</html> 

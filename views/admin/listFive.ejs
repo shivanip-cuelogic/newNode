@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/getDetails" method="post">
+        <h2><%= heading%></h2>
+
+        <% for(var i=0; i < names.length; i++) { %>
+            <!-- <tr>
+               <td id="row_<%=i%>" name="row_<%=i%>">id is:"row_<%=i%>"<%= names[i] %></td> -->
+              <input type="text" id="row_<%=i%>" name="row_<%=i%>" value="<%=names[i]%>">
+              
+             <!-- </tr> -->
+         <% } %>
+         <input type="submit" value="View Details">
+       
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <h3>Search data of particular user</h3>
+        <input type="text" placeholder="Search by first and last name" id="username" name="username">
+        <input type="submit" value="search" onclick="myfun()">
+        <!-- <a href="/admin/getUser/:name" onclick="myfun()">submit</a> -->
+    </form>
+    <script>
+        function myfun(){
+            console.log("hi");
+            var name=document.getElementById("username");
+            console.log("name is:::"+name);
+           
+            name="shivani";
+            window.location.href ="http://localhost:3000/admin/getUser/"+name;
+             event.stopImmediatePropagation();
+        }
+   
+    </script>
+</body>
+</html>
